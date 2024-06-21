@@ -1,0 +1,16 @@
+<h1 class="heading">{{category}}</h1>
+<div class="d-flex carousel">
+  @for(item of filtered_data; track item.id){
+      <div class="col-md-3">
+          <div class="card">
+            <img src="{{item.images[0]}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{item.title}}</h5>
+              <p class="card-text">{{item.description}}</p>
+              <p>Rs:{{item.price}}</p>
+                <button class="btn btn-warning">Buy</button>
+            </div>
+          </div>
+        </div>
+  }
+</div>
